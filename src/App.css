@@ -1,0 +1,106 @@
+#drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  max-width: 100%;
+  height: 200px;
+  padding: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  color: slategray;
+  cursor: pointer;
+}
+
+#file-input {
+  display: none;
+}
+
+#img {
+  image-rendering: pixelated;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#img-viewer-container {
+  display: inline-block;
+}
+
+#img-viewer {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+  margin: 10px;
+}
+
+.boundary {
+  position: absolute;
+  background-color: rgb(124, 255, 124);
+  opacity: 0.5;
+  border: rgb(48, 146, 48) 1px solid;
+}
+
+#dummy-draw-element {
+  display: none;
+  position: absolute;
+  opacity: 0.5;
+  background-color: rgb(133, 124, 255);
+  border: rgb(84, 77, 187) 1px solid;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+}
+
+.focused {
+  opacity: 0.7;
+  z-index: 9999;
+}
+
+.to-delete {
+  opacity: 0.7;
+  background-color: rgb(255, 124, 135);
+  border: rgb(172, 54, 64) 1px solid;
+}
+
+.handle {
+  position: absolute;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  transform: translateX(2.5px) translateY(2.5px);
+}
+
+/* INPUT STUFF */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 300px;
+  margin-bottom: 16px;
+  label {
+    font-size: 14px;
+  }
+  textarea {
+    resize: none;
+  }
+  .error {
+    font-size: 14px;
+    color: red;
+  }
+}
+
+#buttons {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  button {
+    margin: 8px 4px;
+  }
+}
